@@ -17,7 +17,7 @@ export async function connectToDatabase(uri: string) {
     const employeesCollection = db.collection<Employee>("employees");
     collections.employees = employeesCollection;
 
-    const comedyCollection = db.collection<Comedy>("comedy");
+    const comedyCollection = db.collection<Comedy>("comedys");
     collections.comedys = comedyCollection;
 
 }
