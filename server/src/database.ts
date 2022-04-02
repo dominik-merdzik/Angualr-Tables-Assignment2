@@ -1,19 +1,25 @@
 import * as mongodb from "mongodb";
 import { Employee } from "./employee";
+import { Comedy } from "./anime-list/comedy/comedy";
 
 export const collections: {
-    employees?: mongodb.Collection<Employee>;
+    employees?: mongodb.Collection<Employee> , 
+    comedys?: mongodb.Collection<Comedy>;
 } = {};
 
 export async function connectToDatabase(uri: string) {
     const client = new mongodb.MongoClient(uri);
     await client.connect();
 
-    const db = client.db("meanStackExample");
+    const db = client.db("Anime-List");
     await applySchemaValidation(db);
 
     const employeesCollection = db.collection<Employee>("employees");
     collections.employees = employeesCollection;
+
+    const comedyCollection = db.collection<Comedy>("comedy");
+    collections.comedys = comedyCollection;
+
 }
 
 // Update our existing collection with JSON schema validation so we know our documents will always match the shape of our Employee model, even if added elsewhere.
