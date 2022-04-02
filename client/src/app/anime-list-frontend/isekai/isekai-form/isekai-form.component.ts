@@ -10,7 +10,7 @@ import { Isekai } from '../isekai';
     <form class="isekai-form" autocomplete="off" [formGroup]="isekaiForm" (ngSubmit)="submitForm()">
       <div class="form-floating mb-3">
         <input class="form-control" type="text" id="name" formControlName="name" placeholder="Name" required>
-        <label for="name">Name</label>
+        <label for="name">Anime Name</label>
       </div>
 
       <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
@@ -24,7 +24,7 @@ import { Isekai } from '../isekai';
 
       <div class="form-floating mb-3">
         <input class="form-control" type="text" formControlName="position" placeholder="Position" required>
-        <label for="position">Position</label>
+        <label for="position">Studio Name</label>
       </div>
 
       <div *ngIf="position.invalid && (position.dirty || position.touched)" class="alert alert-danger">
@@ -40,16 +40,16 @@ import { Isekai } from '../isekai';
       <div class="mb-3">
         <div class="form-check">
           <input class="form-check-input" type="radio" formControlName="level" name="level" id="level-junior" value="junior" required>
-          <label class="form-check-label" for="level-junior">Junior</label>
+          <label class="form-check-label" for="level-junior">E - Everyone / A - All Ages</label>
         </div>
         <div class="form-check">
           <input class="form-check-input" type="radio" formControlName="level" name="level" id="level-mid" value="mid">
-          <label class="form-check-label" for="level-mid">Mid</label>
+          <label class="form-check-label" for="level-mid">T - Teens, Age 13+</label>
         </div>
         <div class="form-check">
           <input class="form-check-input" type="radio" formControlName="level" name="level" id="level-senior"
             value="senior">
-          <label class="form-check-label" for="level-senior">Senior</label>
+          <label class="form-check-label" for="level-senior">M - Mature, Age 18+</label>
         </div>
       </div>
 

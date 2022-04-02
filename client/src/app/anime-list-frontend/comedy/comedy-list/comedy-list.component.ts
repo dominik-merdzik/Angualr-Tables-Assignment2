@@ -11,10 +11,10 @@ import { ComedyService } from '../comedy.service';
     <table class="table table-striped table-bordered">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Level</th>
-                <th>Action</th>
+              <th>Anime Name</th>
+              <th>Studio</th>
+              <th>Maturity Rating</th>
+              <th>Action</th>
             </tr>
         </thead>
 
