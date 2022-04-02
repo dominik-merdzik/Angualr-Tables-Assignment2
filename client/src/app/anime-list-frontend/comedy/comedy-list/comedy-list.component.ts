@@ -6,6 +6,7 @@ import { ComedyService } from '../comedy.service';
 @Component({
   selector: 'app-comedys-list',
   template: `
+
     <h2 class="text-center m-5">Comedy's List</h2>
 
     <table class="table table-striped table-bordered">
@@ -32,7 +33,14 @@ import { ComedyService } from '../comedy.service';
     </table>
 
     <button class="btn btn-primary mt-3" [routerLink]="['new']">Add a New Comedy</button>
-  `
+  `,
+  styles: [
+    `.dropdown {
+      display:flex;
+      justify-content:center;
+      padding:10px;
+    }`
+  ]
 })
 export class ComedysListComponent implements OnInit {
   comedys$: Observable<Comedy[]> = new Observable();

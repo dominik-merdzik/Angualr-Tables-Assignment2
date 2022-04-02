@@ -7,6 +7,8 @@ import { Isekai } from '../isekai';
 @Component({
   selector: 'app-isekai-form',
   template: `
+
+  
     <form class="isekai-form" autocomplete="off" [formGroup]="isekaiForm" (ngSubmit)="submitForm()">
       <div class="form-floating mb-3">
         <input class="form-control" type="text" id="name" formControlName="name" placeholder="Name" required>
@@ -30,10 +32,10 @@ import { Isekai } from '../isekai';
       <div *ngIf="position.invalid && (position.dirty || position.touched)" class="alert alert-danger">
 
         <div *ngIf="position.errors?.['required']">
-          Position is required.
+          Studio Name is required.
         </div>
         <div *ngIf="position.errors?.['minlength']">
-          Position must be at least 5 characters long.
+         Studio Name must be at least 5 characters long.
         </div>
       </div>
 

@@ -14,8 +14,10 @@ import { EditIsekaiComponent } from './anime-list-frontend/isekai/edit-isekai/ed
 import { IsekaisListComponent } from './anime-list-frontend/isekai/isekai-list/isekai-list.component';
 import { IsekaiFormComponent } from './anime-list-frontend/isekai/isekai-form/isekai-form.component';
 
+//import { headerDropdown } from './header-dropdown.component'; 
+
 const routes: Routes = [
-  { path: '', redirectTo: 'employees', pathMatch: 'full' },
+  { path: '', redirectTo: 'comedys', pathMatch: 'full' },
   { path: 'employees', component: EmployeesListComponent },
   { path: 'employees/new', component: AddEmployeeComponent }, // <-- add this line
   { path: 'employees/edit/:id', component: EditEmployeeComponent }, // <-- add this line
