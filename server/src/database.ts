@@ -1,10 +1,14 @@
 import * as mongodb from "mongodb";
 import { Employee } from "./employee";
 import { Comedy } from "./anime-list/comedy/comedy";
+import { Isekai } from "./anime-list/isekai/isekai";
 
 export const collections: {
+    
     employees?: mongodb.Collection<Employee> , 
     comedys?: mongodb.Collection<Comedy>;
+    isekais?: mongodb.Collection<Isekai>;
+
 } = {};
 
 export async function connectToDatabase(uri: string) {
@@ -19,6 +23,9 @@ export async function connectToDatabase(uri: string) {
 
     const comedyCollection = db.collection<Comedy>("comedys");
     collections.comedys = comedyCollection;
+
+    const isekaiCollection = db.collection<Isekai>("isekais");
+    collections.isekais = isekaiCollection;
 
 }
 

@@ -4,6 +4,8 @@ import express from "express";
 import { connectToDatabase } from "./database";
 import { employeeRouter } from "./employee.routes";
 import { comedyRouter } from "./anime-list/comedy/comedy.routes";
+import { isekaiRouter } from "./anime-list/isekai/isekai.routes";
+
 
 // Load environment variables from the .env file, where the ATLAS_URI is configured
 dotenv.config();
@@ -21,6 +23,7 @@ connectToDatabase(ATLAS_URI)
         app.use(cors());
         app.use("/employees", employeeRouter);
         app.use("/comedys", comedyRouter);
+        app.use("/isekais", isekaiRouter);
 
         // start the Express server
         app.listen(5200, () => {
