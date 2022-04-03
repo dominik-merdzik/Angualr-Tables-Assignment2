@@ -4,9 +4,11 @@ We chose an anime table concept where we can store different anime titles in the
 
 ## Tables
 
-** - Shonen
+** 
+- Shonen
  - Slice-of-life
  - Isekai
  - Comedy
- - Romance**
+ - Romance
+ **
 
