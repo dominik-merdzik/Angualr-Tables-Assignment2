@@ -1,22 +1,12 @@
-# MEAN Stack Sample Application
+# Anime Categories Table
 
-This is a simple CRUD application built using the MEAN (MongoDB, Express, Angular, Node.js) stack. You can also follow the step-by-step [tutorial](https://www.mongodb.com/languages/mean-stack-tutorial) for building this application.
+We chose an anime table concept where we can store different anime titles in their own respected categories. We wanted a simpler way to store our watchlists in an organized way and this was the perfect time. Choose the table/category you want to input your anime title into and save it! then you can go back and see them all in a table.
 
-## How To Run
+## Tables
+ - Shonen
+ - Slice-of-life
+ - Isekai
+ - Comedy
+ - Romance
 
-Set your [Atlas URI connection string](https://docs.atlas.mongodb.com/getting-started/) as a parameter in `server/.env`. Make sure you replace the username and password placeholders with your own credentials.
 
-```
-ATLAS_URI=mongodb+srv://<username>:<password>@sandbox.jadwj.mongodb.net/meanStackExample?retryWrites=true&w=majority
-```
-
-Start the server and client applications:
-```
-npm start
-```
-
-When both applications are built and running, open your browser on http://localhost:4200/.
-
-## Disclaimer
-
-Use at your own risk; not a supported MongoDB product
