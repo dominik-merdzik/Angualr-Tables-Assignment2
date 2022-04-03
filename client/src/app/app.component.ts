@@ -19,8 +19,9 @@ import { Component } from '@angular/core';
     <ul mdbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownMenuButton">
       <li><a class="dropdown-item" href="#">Isekai</a></li>
       <li><a class="dropdown-item" href="#">Comedy</a></li>
-      <li><a class="dropdown-item" href="#">Shoene</a></li>
-      <li><a class="dropdown-item" href="#">slice of life</a></li>
+      <li><a class="dropdown-item" href="#">Romance</a></li>
+      <li><a class="dropdown-item" href="#">Shonen</a></li>
+      <li><a class="dropdown-item" href="#">Slice of Life</a></li>
     </ul>
   </div>
 

@@ -5,6 +5,10 @@ import { connectToDatabase } from "./database";
 import { employeeRouter } from "./employee.routes";
 import { comedyRouter } from "./anime-list/comedy/comedy.routes";
 import { isekaiRouter } from "./anime-list/isekai/isekai.routes";
+import { romanceRouter } from "./anime-list/romance/romance.routes";
+import { shonenRouter } from "./anime-list/shonen/shonen.routes";
+import { sliceOfLifeRouter } from "./anime-list/slice-of-life/sliceOfLife.routes";
+
 
 
 // Load environment variables from the .env file, where the ATLAS_URI is configured
@@ -24,6 +28,9 @@ connectToDatabase(ATLAS_URI)
         app.use("/employees", employeeRouter);
         app.use("/comedys", comedyRouter);
         app.use("/isekais", isekaiRouter);
+        app.use("/romances", romanceRouter);
+        app.use("/shonens", shonenRouter);
+        app.use("/sliceOfLifes", sliceOfLifeRouter);
 
         // start the Express server
         app.listen(5200, () => {
