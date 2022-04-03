@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+@charset "utf-8";
+/* Assignment 1 | COMP1073 Client-Side JavaScript */
+/* font from google fonts */ 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,500&display=swap');
+
+*, *::before, *::after{
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    margin: auto;
+}
+
+.dropdown{
+    padding:10px;
+}
+
+body{ 
+  background-color: #808080;
+}
+main{
+    background-color:white;
+    padding: 20px;
+}
+
+.dropdown-toggle:active, .open .dropdown-toggle {
+    background:#FFF !important; 
+    color:#000 !important;
+}

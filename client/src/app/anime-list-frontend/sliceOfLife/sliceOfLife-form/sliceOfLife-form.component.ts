@@ -55,7 +55,7 @@ import { SliceOfLife } from '../sliceOfLife';
         </div>
       </div>
 
-      <button class="btn btn-primary" type="submit" [disabled]="slifeOfLifeForm.invalid">Add</button>
+      <button class="btn btn-primary" type="submit" [disabled]="sliceOfLifeForm.invalid">Add</button>
     </form>
   `,
   styles: [

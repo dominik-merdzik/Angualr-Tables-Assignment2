@@ -7,7 +7,7 @@ import { SliceOfLifeService } from '../sliceOfLife.service';
 @Component({
   selector: 'app-edit-sliceOfLife.component.ts',
   template: `
-    <h2 class="text-center m-5">Edit an Slice Of Life</h2>
+    <h2 class="text-center m-5">Edit an SliceOfLife</h2>
     <app-sliceOfLife-form [initialState]="sliceOfLife" (formSubmitted)="editSliceOfLife($event)"></app-sliceOfLife-form>
   `
 })
@@ -31,7 +31,7 @@ export class EditSliceOfLifeComponent implements OnInit {
     });
   }
 
-  editShonen(sliceOfLife: SliceOfLife) {
+  editSliceOfLife(sliceOfLife: SliceOfLife) {
     this.sliceOfLifeService.updateSliceOfLife(this.sliceOfLife.value._id || '', sliceOfLife)
       .subscribe({
         next: () => {
