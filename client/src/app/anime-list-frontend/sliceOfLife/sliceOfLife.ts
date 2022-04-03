@@ -1,4 +1,4 @@
-export interface Shonen {
+export interface SliceOfLife {
     name?: string;
     position?: string;
     level?: 'junior' | 'mid' | 'senior';

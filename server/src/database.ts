@@ -2,12 +2,19 @@ import * as mongodb from "mongodb";
 import { Employee } from "./employee";
 import { Comedy } from "./anime-list/comedy/comedy";
 import { Isekai } from "./anime-list/isekai/isekai";
+import { Romance } from "./anime-list/romance/romance";
+import { SliceOfLife } from "./anime-list/slice-of-life/slice-of-life";
+import { Shonen } from "./anime-list/shonen/shonen";
 
 export const collections: {
     
     employees?: mongodb.Collection<Employee> , 
     comedys?: mongodb.Collection<Comedy>;
     isekais?: mongodb.Collection<Isekai>;
+    romances?: mongodb.Collection<Romance>;
+    shonens?: mongodb.Collection<Shonen>;
+    sliceOfLifes?: mongodb.Collection<SliceOfLife>;
+
 
 } = {};
 
@@ -26,6 +33,15 @@ export async function connectToDatabase(uri: string) {
 
     const isekaiCollection = db.collection<Isekai>("isekais");
     collections.isekais = isekaiCollection;
+
+    const romanceCollection = db.collection<Romance>("romances");
+    collections.romances = romanceCollection;
+
+    const shonenCollection = db.collection<Shonen>("shonens");
+    collections.shonens = shonenCollection;
+
+    const sliceOfLifeCollection = db.collection<SliceOfLife>("slifeOfLifes");
+    collections.sliceOfLifes = sliceOfLifeCollection;
 
 }
 
